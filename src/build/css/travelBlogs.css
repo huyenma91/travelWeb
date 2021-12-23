@@ -1,0 +1,48 @@
+/* .title_travelblogs {
+    font-weight: bold;
+    padding-top: 100px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+} */
+
+.title_travelblogs {
+    background-image: url("../images/travelblogs.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 200vh; */
+    /* background-color: rgba(210, 180, 140, 1); */
+}
+
+.travel_space {
+    height: 200px;
+}
+
+.travel_content {
+    width: 1200px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 80px 90px 80px;
+}
+
+.travel_img {
+    width: 100%;
+    justify-content: center;
+}
+
+.travel_img img {
+    margin-top: 50px;
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+.blogs_content {
+    margin-top: 50px;
+}
+
+.blogs_content p {
+    text-align: justify;
+}

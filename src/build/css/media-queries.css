@@ -1,0 +1,289 @@
+@media screen and (max-width: 576px) {
+    /* About Section */
+    .title_content {
+        width: 100%;
+    }
+    .aboutHeight {
+        height: 400px;
+    }
+    /* ChildTour Section */
+    .tour_content {
+        width: 100%;
+        min-height: 625px;
+        /* display: flex; */
+    }
+    .rightcol {
+        float: initial;
+        width: 100%;
+        height: 400px;
+        padding: 0;
+    }
+    .banner {
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+    .banner img {
+        width: 100%;
+        height: 400px;
+    }
+    .info_section1,
+    .info_section2 {
+        display: block;
+        width: 100%;
+    }
+    .leftcol {
+        width: 100%;
+    }
+    /* DayTour Section */
+    .dayTripsContent {
+        width: 100%;
+    }
+    /* blogs Section */
+    .travel_img img {
+        height: 30vw;
+    }
+    .travel_content {
+        width: 100%;
+        padding: 80px 5% 80px;
+    }
+    /* destination Section */
+    .flip {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    /* About Section */
+    .title_content {
+        width: 100%;
+    }
+    .aboutHeight {
+        height: 500px;
+    }
+    /* Footer Section */
+    .footer-top {
+        padding: 40px 0;
+        text-align: center;
+    }
+    .footer-contact i {
+        padding-right: 5px;
+    }
+    .footer-bottom,
+    .footer-social {
+        text-align: center;
+    }
+    .footer-social a {
+        margin: 0 10px;
+    }
+    /* ChildTour Section */
+    .tour_content {
+        width: 100%;
+        min-height: 625px;
+    }
+    .rightcol {
+        float: initial;
+        width: 100%;
+        height: 400px;
+    }
+    .banner {
+        float: left;
+        width: 50%;
+        height: 400px;
+    }
+    .banner img {
+        width: 100%;
+        height: 400px;
+    }
+    .info_section1,
+    .info_section2 {
+        float: right;
+        width: 50%;
+    }
+    .leftcol {
+        width: 100%;
+    }
+    /* DayTour Section */
+    .dayTripsContent {
+        width: 100%;
+    }
+    /* blogs Section */
+    .travel_img img {
+        height: 50vw;
+    }
+    .travel_content {
+        width: 100%;
+        padding: 80px 5% 80px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* About Section */
+    .title_content {
+        width: 100%;
+    }
+    .aboutHeight {
+        height: 700px;
+    }
+    /* Footer Section */
+    .footer-top {
+        padding: 40px 0;
+    }
+    .footer-contact i {
+        padding-right: 5px;
+    }
+    /* ChildTour Section */
+    .tour_content {
+        width: 100%;
+        min-height: 625px;
+    }
+    .rightcol {
+        float: initial;
+        width: 100%;
+        height: 400px;
+    }
+    .banner {
+        float: left;
+        width: 50%;
+        height: 400px;
+    }
+    .banner img {
+        width: 100%;
+        height: 400px;
+    }
+    .info_section1,
+    .info_section2 {
+        float: right;
+        width: 50%;
+    }
+    .leftcol {
+        width: 100%;
+    }
+    /* DayTour Section */
+    .dayTripsContent {
+        width: 100%;
+    }
+    /* blogs Section */
+    .travel_img img {
+        height: 50vw;
+    }
+    .travel_content {
+        width: 100%;
+        padding: 80px 90px 80px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* About Section */
+    .title_content {
+        width: 100%;
+    }
+    .aboutHeight {
+        height: 800px;
+    }
+    /* Footer Section */
+    .footer-top {
+        padding: 40px 0;
+    }
+    /* ChildTour Section */
+    .tour_content {
+        width: 100%;
+        min-height: 625px;
+    }
+    .rightcol {
+        float: initial;
+        width: 100%;
+        height: 400px;
+    }
+    .banner {
+        float: left;
+        width: 50%;
+        height: 400px;
+    }
+    .banner img {
+        width: 100%;
+        height: 400px;
+    }
+    .info_section1,
+    .info_section2 {
+        float: right;
+        width: 50%;
+    }
+    .leftcol {
+        width: 100%;
+    }
+    /* DayTour Section */
+    .dayTripsContent {
+        width: 100%;
+    }
+    /* blogs Section */
+    .travel_img img {
+        height: 500px;
+    }
+    .travel_content {
+        width: 100%;
+        padding: 80px 90px 80px;
+    }
+    /* destination Section */
+    /* .flip {
+        width: 200px;
+    } */
+}
+
+@media screen and (min-width: 1200px) {
+    /* About Section */
+    .title_content {
+        width: 1200px;
+    }
+    .aboutHeight {
+        height: 600px;
+    }
+    /* ChildTour Section */
+    .tour_content {
+        width: 1200px;
+    }
+    .rightcol {
+        float: right;
+        width: 33.33%;
+    }
+    .banner {
+        float: initial;
+        width: 100%;
+        height: max-content;
+    }
+    .banner img {
+        width: 100%;
+        height: 200px;
+    }
+    .info_section1,
+    .info_section2 {
+        float: initial;
+        width: 100%;
+    }
+    .leftcol {
+        width: 66.66%;
+    }
+    /* DayTour Section */
+    .dayTripsContent {
+        width: 1200px;
+    }
+    /* blogs Section */
+    .travel_img img {
+        height: 500px;
+    }
+    .travel_content {
+        width: 1200px;
+        padding: 80px 90px 80px;
+    }
+    /* destination Section */
+    /* .flip {
+        width: 300px;
+    } */
+}
+
+
+/* @media screen and (min-width: 1400px) {
+    .flip {
+        width: 400px;
+    }
+} */
