@@ -21,7 +21,7 @@ const db = mysql.createPool({
     host: 'us-cdbr-east-05.cleardb.net',
     user: 'b7b7839688788e',
     password: 'ad0dd4ba',
-    databa
+    database: 'heroku_fc99f196a2c8bee',
 })
 
 //insert 1 tour data
