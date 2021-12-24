@@ -46,7 +46,7 @@ app.get('/api/maintour', (req, res) => {
 })
 app.use(cors());
 //get 4 newest tours
-app.post('/api/topData', (req, res) => {
+app.post('/api/maintour/topData', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour order by id desc LIMIT 4;"
     db.query(sqlInsert, (err, result) => {
         if (err) throw err;
