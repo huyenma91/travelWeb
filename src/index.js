@@ -3,12 +3,13 @@ const cors = require('cors');
 const mysql = require('mysql');
 const app = express();
 const path = require('path');
-
+const bodyParser = require('body-parser');
 
 
 app.use(cors());
 PORT = process.env.PORT || 3001;
 app.use(express.json())
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,'build')));
 // const db = mysql.createPool({
 //     host: 'localhost',
