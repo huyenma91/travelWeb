@@ -25,7 +25,7 @@ const db = mysql.createPool({
     database: 'heroku_fc99f196a2c8bee',
 })
 
-app.use(cors());
+
 //insert 1 tour data
 app.get('/api/maintour', (req, res) => {
     const titleTour = "Starcraft";    
@@ -44,7 +44,7 @@ app.get('/api/maintour', (req, res) => {
     })
 
 })
-app.use(cors());
+
 //get 4 newest tours
 app.post('/api/maintour/topData', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour order by id desc LIMIT 4;"
@@ -54,7 +54,7 @@ app.post('/api/maintour/topData', (req, res) => {
     })
 
 })
-app.use(cors());
+
 //get all tours
 app.post('/api/maintour/allData', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour"
@@ -64,7 +64,7 @@ app.post('/api/maintour/allData', (req, res) => {
     })
 
 })
-app.use(cors());
+
 //get all child tour's image
 app.post('/api/childtour/image', (req, res) => {
     const sqlInsert = "SELECT * FROM childtour;"
@@ -74,7 +74,7 @@ app.post('/api/childtour/image', (req, res) => {
     })
 
 })
-app.use(cors());
+
 //get all child tour's day info
 app.post('/api/childtour/day',(req, res) => {
     const titleTour = req.body.titleTour;
@@ -85,7 +85,7 @@ app.post('/api/childtour/day',(req, res) => {
     })
 
 })
-app.use(cors());
+
 //get 3 newest blog abstract
 app.post('/api/bloglist', (req, res) => {
     const sqlInsert = "SELECT * FROM blogs order by idtips desc LIMIT 3;"
@@ -95,7 +95,7 @@ app.post('/api/bloglist', (req, res) => {
     })
 
 })
-app.use(cors());
+
 //get each blog info
 app.post('/api/blog',(req, res) => {
     const blog = req.body.blog;
@@ -106,7 +106,7 @@ app.post('/api/blog',(req, res) => {
     })
 
 })
-app.use(cors());
+
 //get all half day tours 
 app.post('/api/maintour/hd', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour WHERE dayTrips = '0.5';"
@@ -116,7 +116,7 @@ app.post('/api/maintour/hd', (req, res) => {
     })
 
 })
-app.use(cors());
+
 //get all 1 day tours 
 app.post('/api/maintour/1d', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour WHERE dayTrips = '1';"
@@ -125,7 +125,7 @@ app.post('/api/maintour/1d', (req, res) => {
         res.send({tour1d: result})
     })
 })
-app.use(cors());
+
 //get all 2 day tours 
 app.post('/api/maintour/2d', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour WHERE dayTrips = '2';"
