@@ -43,7 +43,7 @@ app.get('/api/maintour', (req, res) => {
 
 })
 //get 4 newest tours
-app.post('/api/maintour/topData', (req, res) => {
+app.post('/api/topData', (req, res) => {
     const sqlInsert = "SELECT * FROM maintour order by id desc LIMIT 4;"
     db.query(sqlInsert, (err, result) => {
         if (err) throw err;
