@@ -27,69 +27,69 @@ const db = mysql.createPool({
     database: 'heroku_fc99f196a2c8bee',
 })
 
-// //register
-// app.post('/api/register', async (req, res) => {
-//     const username= req.body.username;
-//     const email = req.body.email;
-//     const password = req.body.password;
-//     const activate = 1;
-//     const checkEmail = await db.query('SELECT email FROM users WHERE email = ?;', [email], async (err, result) => {
-//         if (err) throw err;
-//         if (result.length>0) {
-//             // console.log('User: ' + result[0].email + ' hết')
-//             res.send({ message: "User existed" })
-//         }
-//         else {
-//             const passwordHash = await bcrypt.hash(password, 10);
-//             const resultQuery = await db.query("INSERT INTO users (activate,email, password,name) VALUES (?,?,?,?);", [activate,email, passwordHash,username], (err, result) => {
-//                 if (err) throw err;
-//             })
-//             jwt.sign({username:username}, process.env.JWT_SECRET,
-//                 { expiresIn: '1d', }, (err, token) => {
-//                     if (err) {
-//                         return res.status(500).send(err);
-//                     }
-//                     res.status(200).json({ token });
-//                 }
-//             )
-//         }
-//     })
-// })
+//register
+app.post('/api/register', async (req, res) => {
+    const username= req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+    const activate = 1;
+    const checkEmail = await db.query('SELECT email FROM users WHERE email = ?;', [email], async (err, result) => {
+        if (err) throw err;
+        if (result.length>0) {
+            // console.log('User: ' + result[0].email + ' hết')
+            res.send({ message: "User existed" })
+        }
+        else {
+            const passwordHash = await bcrypt.hash(password, 10);
+            const resultQuery = await db.query("INSERT INTO users (activate,email, password,name) VALUES (?,?,?,?);", [activate,email, passwordHash,username], (err, result) => {
+                if (err) throw err;
+            })
+            jwt.sign({username:username}, process.env.JWT_SECRET,
+                { expiresIn: '1d', }, (err, token) => {
+                    if (err) {
+                        return res.status(500).send(err);
+                    }
+                    res.status(200).json({ token });
+                }
+            )
+        }
+    })
+})
 
-// //login
-// app.post('/api/login', async (req, res) => {
-//     const email = req.body.email;
-//     const password = req.body.password;
-//     const passwordHash = await db.query("SELECT * FROM users WHERE email = ?", [email], async (err, result, fields) => {
-//         if (err) {
-//             res.send(err);
-//             console.log("AA");
-//         }
-//         if (result.length > 0) {
-//             const isCorrect = await bcrypt.compare(password, result[0].password)
-//             // console.log('day la result :' + result[0].name + ' hết')
-//             if (isCorrect) {
-//                 jwt.sign({
-//                     username: result[0].name
-//                 }, process.env.JWT_SECRET,
-//                     { expiresIn: '1d', }, (err, token) => {
-//                         if (err) {
-//                             return res.status(500).send(err);
-//                         }
-//                         res.status(200).json({ token });
-//                     }
-//                 )
-//                 // res.send(result)
-//             } else {
-//                 // res.sendStatus(401);
-//                 res.send({ message: "Wrong email/password" })
-//             }
-//         } 
-//         else {
-//             res.send({ message: "Wrong email/password" })
-//         }
-//     });
-// })
+//login
+app.post('/api/login', async (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+    const passwordHash = await db.query("SELECT * FROM users WHERE email = ?", [email], async (err, result, fields) => {
+        if (err) {
+            res.send(err);
+            console.log("AA");
+        }
+        if (result.length > 0) {
+            const isCorrect = await bcrypt.compare(password, result[0].password)
+            // console.log('day la result :' + result[0].name + ' hết')
+            if (isCorrect) {
+                jwt.sign({
+                    username: result[0].name
+                }, process.env.JWT_SECRET,
+                    { expiresIn: '1d', }, (err, token) => {
+                        if (err) {
+                            return res.status(500).send(err);
+                        }
+                        res.status(200).json({ token });
+                    }
+                )
+                // res.send(result)
+            } else {
+                // res.sendStatus(401);
+                res.send({ message: "Wrong email/password" })
+            }
+        } 
+        else {
+            res.send({ message: "Wrong email/password" })
+        }
+    });
+})
 //insert 1 tour data
 app.get('/api/maintour', (req, res) => {
     const titleTour = "Starcraft";
